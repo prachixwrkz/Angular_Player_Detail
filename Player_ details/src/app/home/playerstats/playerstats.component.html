@@ -1,0 +1,37 @@
+
+
+<h2 mat-dialog-title *ngIf="playerInfo!=null">{{playerInfo.fullName}}</h2>
+
+<mat-dialog-content style="overflow: hidden;margin-top: 0%;">
+                <table *ngIf="playerInfo!=null" border="1">
+                                <tr>
+                                    <td colspan="2" ><img  [src]="playerInfo.imageURL" ></td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>Name</td>
+                                    <td>{{playerInfo.fullName}}</td>
+                                </tr> -->
+                                <tr>
+                                        <td>Born</td>
+                                        <td>{{playerInfo.born}}</td>
+                                </tr>
+                        
+                                <tr>
+                                        <td>Batting Style</td>
+                                        <td>{{playerInfo.battingStyle}}</td>
+                                </tr>
+                                <tr>
+                                        <td>Bowling Style</td>
+                                        <td>{{playerInfo.bowlingStyle}}</td>
+                                </tr>
+                                <tr>
+                                        <td>Role</td>
+                                        <td>{{playerInfo.playingRole}}</td>
+                                </tr>
+                                
+                        </table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+                <button mat-button mat-dialog-close>Close</button>
+                
+</mat-dialog-actions>

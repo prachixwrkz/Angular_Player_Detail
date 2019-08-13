@@ -1,0 +1,40 @@
+<div style="margin: 15px;">
+      
+  <div>
+    
+      <input class="form-control" name="date" type="date" #d (keyup.enter)="filterMtachesByDate(d.value)">
+  </div>
+  <br>
+ <ngx-datatable
+ #mydatatable
+ class="material"
+ [headerHeight]="50"
+ [limit]="8"
+ [columnMode]="'force'"
+ [footerHeight]="50"
+ [rowHeight]="'auto'"
+ [rows]="rows">
+ <ngx-datatable-column name="Date">
+   <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex"  let-row="row">
+     <span>
+       {{row.date|date:'dd-MMM-yy'}}
+     </span>
+   </ng-template>
+ </ngx-datatable-column>
+
+ <ngx-datatable-column name="Teams">
+   <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="row">
+     <span>
+       {{row.name}}
+     </span>
+   </ng-template>
+ </ngx-datatable-column>
+
+
+
+
+
+
+</ngx-datatable>
+
+</div>
